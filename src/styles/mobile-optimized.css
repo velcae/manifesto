@@ -1,0 +1,819 @@
+/* Mobile Optimization for 390x844px and smaller devices */
+
+/* ===== HEADER OPTIMIZATION ===== */
+@media (max-width: 1024px) {
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .topbarInner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  /* Hide desktop action buttons on mobile */
+  .topActions {
+    display: none !important;
+  }
+
+  /* Show mobile menu button */
+  .mobileMenuBtn {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    min-height: 52px;
+  }
+
+  .topbarInner {
+    min-height: 48px !important;
+    padding: 8px 12px !important;
+    gap: 8px !important;
+    flex-wrap: nowrap;
+  }
+
+  .logo {
+    font-size: 16px !important;
+    font-weight: 800;
+    flex: 0 0 auto;
+    z-index: 2;
+  }
+
+  .mobileMenuBtn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    flex: 0 0 auto;
+    padding: 6px !important;
+    margin-left: auto !important;
+  }
+
+  /* Desktop nav hidden on mobile */
+  .nav {
+    display: none !important;
+    position: fixed !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: 48px !important;
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+    background: rgba(250, 248, 244, 0.98) !important;
+    border-bottom: 1px solid var(--line) !important;
+    flex-direction: column !important;
+    padding: 8px 12px !important;
+    gap: 6px !important;
+    z-index: 99;
+    transform: none !important;
+  }
+
+  .nav.open {
+    display: flex !important;
+  }
+
+  .nav a, .nav button {
+    width: 100% !important;
+    padding: 12px 14px !important;
+    font-size: 13px !important;
+    text-align: left !important;
+    border-radius: 6px !important;
+    border: none !important;
+    background: transparent;
+    color: inherit;
+  }
+
+  .nav a:hover, .nav button:hover {
+    background: #efe9df;
+  }
+
+  .nav a.active, .nav button.active {
+    background: rgba(211, 92, 41, 0.12) !important;
+    color: var(--accent) !important;
+    font-weight: 700 !important;
+  }
+
+  .nav a.active::after, .nav button.active::after {
+    display: none !important;
+  }
+}
+
+
+/* ===== MAIN CONTENT OPTIMIZATION ===== */
+@media (max-width: 480px) {
+  .page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .pageShell {
+    padding: 12px !important;
+    max-height: none !important;
+    overflow-y: auto;
+    flex: 1;
+  }
+
+  .pageIntro {
+    gap: 8px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .eyebrow {
+    font-size: 9px !important;
+  }
+
+  .pageTitle {
+    font-size: 20px !important;
+    line-height: 1.2 !important;
+  }
+
+  .pageText {
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+  }
+
+  .pageCards {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .pageCard {
+    padding: 12px !important;
+  }
+
+  .pageCard h3 {
+    font-size: 14px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .pageCard p {
+    font-size: 12px !important;
+  }
+
+  /* Hero section optimization */
+  .heroSection {
+    padding: 12px 0 !important;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    gap: 8px !important;
+  }
+
+  .heroLeft {
+    flex: 1;
+  }
+
+  .heroRight {
+    flex: 1;
+  }
+
+  .heroTitle {
+    font-size: 28px !important;
+    line-height: 1.15 !important;
+    margin: 0 0 4px !important;
+    white-space: normal !important;
+    height: 66px !important;
+    min-height: 66px !important;
+    display: block !important;
+    overflow: visible !important;
+  }
+
+  .typingText {
+    display: block !important;
+    min-height: 66px !important;
+    line-height: 1.15 !important;
+    white-space: pre-line !important;
+  }
+
+  .heroLeft p {
+    margin: 4px 0 0 !important;
+    line-height: 1.4 !important;
+  }
+
+  .searchBar {
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 6px !important;
+    max-width: 100% !important;
+    padding: 4px !important;
+    margin-top: 8px !important;
+  }
+
+  .searchInput {
+    flex: 1 !important;
+    width: auto !important;
+    padding: 6px 8px !important;
+  }
+
+  .searchBtn {
+    width: auto !important;
+    padding: 8px 16px !important;
+  }
+
+  /* Metrics optimization */
+  .metrics {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+
+  .metric {
+    min-height: 90px !important;
+    padding: 10px !important;
+  }
+
+  .metricValue {
+    font-size: 24px !important;
+  }
+
+  .metricLabel {
+    font-size: 10px !important;
+  }
+
+  .heroMetricsMobile {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 6px !important;
+    margin-top: 4px !important;
+  }
+
+  .heroMetricsMobile .metric {
+    min-height: 72px !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 8px 4px !important;
+  }
+
+  .heroMetricsMobile .metricIcon {
+    width: 24px !important;
+    height: 24px !important;
+    margin: 0 auto 4px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .heroMetricsMobile .metricValue {
+    font-size: 16px !important;
+  }
+
+  .heroMetricsMobile .metricLabel {
+    font-size: 8px !important;
+    line-height: 1.1 !important;
+  }
+
+  /* Filters optimization */
+  .filterRow {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    padding-bottom: 12px !important;
+    overflow-x: auto !important;
+    scrollbar-width: none !important;
+    -webkit-overflow-scrolling: touch !important;
+    width: 100% !important;
+  }
+  
+  .filterRow::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .filters {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 8px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .filterPill {
+    min-width: auto !important;
+    width: auto !important;
+    font-size: 11px !important;
+    padding: 6px 10px !important;
+    min-height: 32px !important;
+    height: 32px !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .sortBlock {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 8px !important;
+    max-width: none !important;
+    width: auto !important;
+    flex-shrink: 0 !important;
+  }
+
+  .sortBtn {
+    min-width: auto !important;
+    width: auto !important;
+    font-size: 11px !important;
+    padding: 6px 10px !important;
+    min-height: 32px !important;
+    height: 32px !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .viewToggle {
+    display: none !important;
+  }
+
+  /* Label display overrides for mobile */
+  .desktopLabel,
+  .sortLabelDesktop {
+    display: none !important;
+  }
+  .mobileLabel,
+  .sortLabelMobile {
+    display: inline !important;
+  }
+
+
+  /* Content grid optimization */
+  .contentGrid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .politicianGrid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  /* Card optimization */
+  .card {
+    padding: 10px 12px !important;
+  }
+
+  .cardTop {
+    gap: 10px !important;
+  }
+
+  .avatarBox {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .name {
+    font-size: 13px !important;
+  }
+
+  .subText {
+    font-size: 11px !important;
+  }
+
+  .promises {
+    font-size: 11px !important;
+    margin-top: 6px !important;
+  }
+
+  .statsRow {
+    gap: 4px !important;
+  }
+
+  .statKept, .statBroken, .statPending {
+    font-size: 11px !important;
+  }
+
+  .statLabel {
+    font-size: 9px !important;
+  }
+}
+
+/* ===== POLITICIAN LIST/DETAIL OPTIMIZATION ===== */
+@media (max-width: 480px) {
+  .politicianLayoutWrap {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .politicianLayout {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .politicianLeftPanel, .politicianRightPanel {
+    padding: 12px !important;
+  }
+
+  .profileHeader {
+    gap: 12px !important;
+  }
+
+  .profileAvatar {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .profileCopy h2 {
+    font-size: 16px !important;
+  }
+
+  .profileRole {
+    font-size: 11px !important;
+  }
+
+  .profileMeta {
+    font-size: 10px !important;
+  }
+
+  .detailStats {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  .profileHeaderMetricsRow {
+    flex-direction: column !important;
+  }
+
+  .profileHeaderBox, .metricsBox {
+    padding: 12px !important;
+  }
+
+  .metricsRow {
+    flex-wrap: wrap;
+    gap: 6px !important;
+  }
+
+  .metricSmall {
+    min-width: auto;
+    flex: 1 1 45%;
+    padding: 8px 10px !important;
+  }
+
+  .metricSmallValue {
+    font-size: 14px !important;
+  }
+
+  .metricSmallLabel {
+    font-size: 9px !important;
+  }
+}
+
+/* ===== PROMISE LIST OPTIMIZATION ===== */
+@media (max-width: 480px) {
+  .layoutGrid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    height: auto !important;
+  }
+
+  .layoutLeft, .layoutRight {
+    max-height: none !important;
+    min-height: auto !important;
+  }
+
+  .sectionLabel {
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+    font-size: 10px !important;
+  }
+
+  .promiseList {
+    gap: 8px !important;
+    max-height: none !important;
+  }
+
+  .promiseItem {
+    padding: 10px 12px !important;
+    gap: 10px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .statusDot {
+    width: 12px !important;
+    height: 12px !important;
+  }
+
+  .promiseItemTitle {
+    font-size: 13px !important;
+  }
+
+  .promiseItemMeta {
+    font-size: 10px !important;
+  }
+
+  .promiseDetailCard {
+    padding: 12px !important;
+  }
+
+  .promiseDetailTitle {
+    font-size: 16px !important;
+  }
+
+  .promiseSection {
+    padding-top: 8px !important;
+  }
+
+  .promiseSectionTitle {
+    font-size: 10px !important;
+  }
+
+  .promiseSection p {
+    font-size: 12px !important;
+  }
+
+  .sourceList {
+    padding-left: 16px !important;
+  }
+
+  .evidenceGrid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  .reportCard {
+    display: block !important;
+    margin-top: 12px !important;
+    padding: 12px !important;
+  }
+
+  .reportCardTitle {
+    font-size: 13px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .reportCardBtn {
+    padding: 10px 16px !important;
+    font-size: 12px !important;
+  }
+}
+
+/* ===== TAB OPTIMIZATION ===== */
+@media (max-width: 480px) {
+  .navTabs {
+    gap: 0 !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+
+  .navTab {
+    padding: 10px 14px !important;
+    font-size: 12px !important;
+    white-space: nowrap;
+    flex: 0 0 auto;
+  }
+
+  .tabContent {
+    padding: 12px 0 !important;
+  }
+}
+
+/* ===== SIDEBAR OPTIMIZATION ===== */
+@media (max-width: 480px) {
+  .sidebarCard {
+    padding: 12px 10px !important;
+  }
+
+  .sidebarTitle h3 {
+    font-size: 13px !important;
+  }
+
+  .brokenItem {
+    padding: 8px 0 !important;
+  }
+
+  .brokenLabel {
+    font-size: 9px !important;
+  }
+
+  .viewListBtn {
+    font-size: 12px !important;
+    padding: 8px 10px !important;
+  }
+}
+
+/* ===== GENERAL FIXES ===== */
+@media (max-width: 480px) {
+  /* Fix overflow issues */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Ensure proper text wrapping */
+  .name, .subText, .promiseItemTitle {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Improve touch targets */
+  button, a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Remove unnecessary margins on mobile */
+  h1, h2, h3 {
+    margin-bottom: 8px !important;
+  }
+
+  /* Stack flex items */
+  .profileHeaderMetricsRow {
+    flex-direction: column;
+    gap: 10px !important;
+  }
+
+  .profileHeaderBox, .metricsBox {
+    flex: 1 !important;
+  }
+
+  /* Ensure proper spacing */
+  .backLink {
+    padding: 10px 0 !important;
+    margin-bottom: 8px !important;
+  }
+}
+
+/* Additional mobile-specific improvements */
+@media (max-width: 480px) {
+  /* Fix card layout issues */
+  .card {
+    padding: 10px !important;
+  }
+
+  .cardTop {
+    flex-direction: column;
+    gap: 8px !important;
+  }
+
+  .name {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Fix Promises text display */
+  .promises {
+    margin-top: 8px !important;
+    margin-bottom: 6px !important;
+    font-size: 12px !important;
+    font-weight: 500;
+    color: #1d1915 !important;
+    line-height: 1.4;
+  }
+
+  /* Fix progress bar spacing */
+  .progress {
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+    height: 8px !important;
+  }
+
+  /* Statistics row spacing */
+  .statsRow {
+    margin-top: 8px !important;
+    gap: 6px !important;
+  }
+
+  .statLabel {
+    margin-top: 2px !important;
+  }
+
+  /* Hero and content padding */
+  .hero {
+    padding: 4px 0 !important;
+  }
+
+  .heroLeft {
+    margin-bottom: 4px;
+  }
+
+  /* Ensure buttons are properly spaced */
+  .filterPill {
+    padding: 8px 10px !important;
+    min-height: 44px;
+  }
+
+  /* Report card button */
+  .reportCardBtn {
+    min-height: 44px !important;
+  }
+
+  /* Sidebar improvements */
+  .sidebarCard {
+    margin-top: 12px !important;
+  }
+
+  .brokenItem {
+    padding: 10px 0 !important;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Improve card clickability */
+  .card, .pageCard, .promiseItem {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .card {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  /* Page cards styling */
+  .pageCards {
+    margin-top: 16px !important;
+  }
+
+  .pageCard {
+    padding: 12px !important;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* Container max width for narrow screens */
+  .container {
+    width: 100%;
+    padding: 0 12px;
+  }
+
+  /* Page-level padding */
+  .page {
+    padding: 0;
+  }
+
+  /* Fix any horizontal overflow */
+  * {
+    box-sizing: border-box;
+  }
+
+  body, html, #root {
+    overflow-x: hidden;
+  }
+
+  /* Ensure proper line breaks in headers */
+  h1, h2, h3 {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+}
+
+/* Extreme small devices (very narrow) */
+@media (max-width: 360px) {
+  .logo {
+    font-size: 14px !important;
+  }
+
+  .pageTitle {
+    font-size: 18px !important;
+  }
+
+  .pageCard h3 {
+    font-size: 13px !important;
+  }
+
+  .metric {
+    min-height: 80px !important;
+    padding: 8px !important;
+  }
+
+  .metricValue {
+    font-size: 20px !important;
+  }
+
+  .filterPill {
+    padding: 6px 8px !important;
+    font-size: 11px !important;
+  }
+
+  .topbarInner {
+    padding: 6px 10px !important;
+  }
+
+  .logo {
+    font-size: 14px !important;
+  }
+
+  .container {
+    padding: 0 10px !important;
+  }
+}
